@@ -1,19 +1,24 @@
 import Home from './view/home.vue'
-import VuetifyAudio from './view/vuetifyaudio.vue'
+import Board from './view/board.vue'
 
 import NotFound from './view/404.vue'
 
 const routes = [
+	{
+		path: '/404',
+		component: NotFound,
+		name: 'notFound',
+		hidden: true
+	},
 	{
 		path: '/',
 		component: Home,
 		name: 'home',
 	},
 	{
-		path: '/vuetifyaudio',
-		component: VuetifyAudio,
-		name: 'vuetify-audio',
-		hidden: true
+		path: '/board/:boardGuid',
+		component: Board,
+		name: 'board',
 	},
 	{
 		path: '*',
